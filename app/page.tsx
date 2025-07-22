@@ -2,6 +2,7 @@
 import EventDetailsSection from "@/components/EventDetailsSection";
 import EventRegistrationForm from "@/components/EventRegistrationForm";
 import HeroSection from "@/components/HeroSection";
+import LeaderboardSection from "@/components/LeaderboardSection";
 
 export default function Home() {
   return (
@@ -27,6 +28,7 @@ export default function Home() {
         </div>
         <EventDetailsSection />
         <EventRegistrationForm />
+        <LeaderboardSection />
       </div>
     </main>
   );

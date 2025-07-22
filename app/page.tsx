@@ -1,6 +1,7 @@
 
 import EventDetailsSection from "@/components/EventDetailsSection";
 import EventRegistrationForm from "@/components/EventRegistrationForm";
+import FAQAccordion from "@/components/FAQAccordion";
 import HeroSection from "@/components/HeroSection";
 import LeaderboardSection from "@/components/LeaderboardSection";
 
@@ -29,6 +30,7 @@ export default function Home() {
         <EventDetailsSection />
         <EventRegistrationForm />
         <LeaderboardSection />
+        <FAQAccordion />
       </div>
     </main>
   );

@@ -114,7 +114,7 @@ export default function EventRegistrationForm() {
   }
 
   return (
-    <section className="relative py-20 px-4 sm:px-6 lg:px-8 overflow-hidden">
+    <section id="event-registration" className="relative py-20 px-4 sm:px-6 lg:px-8 overflow-hidden">
       {/* Background decorative elements */}
       <div className="absolute inset-0">
         <div className="absolute top-20 left-10 w-72 h-72 bg-purple-500/10 rounded-full blur-3xl" />

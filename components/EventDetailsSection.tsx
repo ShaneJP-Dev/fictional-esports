@@ -90,6 +90,7 @@ export default function EventDetailsSection() {
                   <p className="text-base sm:text-lg font-semibold mb-3">Streamed live on Twitch</p>
                 </div>
                 <a 
+                  // link to Twitch stream
                   href="https://twitch.tv" 
                   target="_blank" 
                   rel="noopener noreferrer"

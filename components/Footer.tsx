@@ -1,3 +1,5 @@
+"use client"
+
 import { 
   MessageCircle, 
   Youtube, 
@@ -20,9 +22,14 @@ const Footer = () => {
               {/* Logo placeholder - you can replace with your actual logo */}
               <div className="flex items-center justify-center">
                 <img 
-                src="images/mettle-logo.jpg" 
+                src="/images/mettle-logo.jpg" 
                 alt="Mettlestate Logo" 
                 className="w-16 h-16 object-contain"
+                onError={(e) => {
+                const target = e.target as HTMLImageElement;
+                target.onerror = null; // Prevent infinite loop
+                target.src = 'https://placehold.co/64x64/1c2a3e/FFF?text=Logo';
+              }}
               />
               </div>
             </div>

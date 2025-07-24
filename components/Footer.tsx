@@ -27,7 +27,7 @@ const Footer = () => {
                 className="w-16 h-16 object-contain"
                 onError={(e) => {
                 const target = e.target as HTMLImageElement;
-                target.onerror = null; // Prevent infinite loop
+                target.onerror = null; 
                 target.src = 'https://placehold.co/64x64/1c2a3e/FFF?text=Logo';
               }}
               />
@@ -91,11 +91,22 @@ const Footer = () => {
               >
                 <Youtube className="w-6 h-6 text-gray-400 group-hover:text-white" />
               </a>
+              
               <a 
                 href="#" 
-                className="flex items-center justify-center w-12 h-12 bg-slate-800 hover:bg-black rounded-lg transition-colors duration-200 group"
+                className="flex items-center justify-center w-12 h-12 bg-slate-800 hover:bg-white rounded-lg transition-colors duration-200 group"
               >
-                <Twitter className="w-6 h-6 text-gray-400 group-hover:text-white" />
+                {/* https://www.flaticon.com/free-icon/twitter_5968958?term=x&page=1&position=6&origin=tag&related_id=5968958 */}
+                <img
+                  src="/images/twitter.png"
+                  alt="X (Twitter) Icon"
+                  className="w-6 h-6 object-contain"
+                  onError={(e) => {
+                    const target = e.target as HTMLImageElement;
+                    target.onerror = null;
+                    target.src = "https://placehold.co/24x24/000/FFF?text=X";
+                  }}
+                />
               </a>
               <a 
                 href="#" 
@@ -113,7 +124,17 @@ const Footer = () => {
                 href="#" 
                 className="flex items-center justify-center w-12 h-12 bg-slate-800 hover:bg-black rounded-lg transition-colors duration-200 group"
               >
-                <Music className="w-6 h-6 text-gray-400 group-hover:text-white" />
+                {/* https://www.flaticon.com/free-icon/tik-tok_3046121?term=tiktok&page=1&position=2&origin=search&related_id=3046121 */}
+                <img
+                  src="/images/tiktok.png"
+                  alt="TikTok Icon"
+                  className="w-6 h-6 object-contain"
+                  onError={(e) => {
+                    const target = e.target as HTMLImageElement;
+                    target.onerror = null;
+                    target.src = "https://placehold.co/24x24/000/FFF?text=X";
+                  }}
+                />
               </a>
               <a 
                 href="#" 

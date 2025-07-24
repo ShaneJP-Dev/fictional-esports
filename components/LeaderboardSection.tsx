@@ -108,28 +108,34 @@ const LeaderboardSection: React.FC = () => {
         )}
         {/* Remaining players */}
         {remaining.length > 0 && (
-          <div className="bg-yellow-50/10 backdrop-blur-sm rounded-xl p-6 border border-yellow-700/40 shadow-inner">
+          <div className="bg-yellow-50/10 backdrop-blur-sm rounded-xl p-4 sm:p-6 border border-yellow-700/40 shadow-inner">
             {remaining.map((user, index) => (
               <div
                 key={user.id}
-                className="flex items-center justify-between py-4 border-b border-yellow-700/30 last:border-b-0 hover:bg-yellow-700/10 transition-colors rounded-lg px-2"
+                className="
+          flex flex-col sm:flex-row items-center justify-between 
+          py-3 sm:py-4 border-b border-yellow-700/30 last:border-b-0 
+          hover:bg-yellow-700/10 transition-colors rounded-lg px-2
+          gap-3
+        "
               >
-                <div className="flex items-center space-x-4">
-                  <div className="text-yellow-100 text-xl font-bold w-8 text-center">
+                <div className="flex items-center space-x-4 w-full sm:w-auto justify-start">
+                  <div className="text-yellow-100 text-lg sm:text-xl font-bold w-8 text-center">
                     {index + 4}
                   </div>
-                  <div className="w-12 h-12 rounded-full overflow-hidden border-2 border-purple-700 shadow-md">
+                  <div className="w-12 h-12 rounded-full overflow-hidden border-2 border-purple-700 shadow-md flex-shrink-0">
                     <img
                       src={user.avatar}
                       alt={user.gamerTag}
                       className="w-full h-full object-cover"
+                      loading="lazy"
                     />
                   </div>
-                  <div className="text-yellow-100 font-semibold text-xl font-fantasy">
+                  <div className="text-yellow-100 font-semibold text-lg sm:text-xl font-fantasy truncate max-w-xs">
                     {user.gamerTag}
                   </div>
                 </div>
-                <div className="text-yellow-200 text-2xl font-bold">
+                <div className="text-yellow-200 text-2xl font-bold mt-2 sm:mt-0">
                   {user.points}
                 </div>
               </div>
